@@ -1,0 +1,133 @@
+Python Basics: Assignment Submission
+Name: Vaibhav Karkute 
+Subject: Python Scripting & File Handling
+ 
+1. Grade Checker
+Objective: Take a score as input and print the grade based on specific ranges using if-elif-else statements.
+Code:
+Python
+# Grade Checker Program
+
+score = int(input("Enter your score: "))
+
+if score >= 90:
+    print("Grade: A")
+elif score >= 80:
+    print("Grade: B")
+elif score >= 70:
+    print("Grade: C")
+elif score >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+Explanation:
+•	The program takes user input using input().
+•	It converts the input string to an integer using int().
+•	It uses if-elif-else conditional logic to check the score against the defined ranges and prints the corresponding grade.
+Sample Output:
+Plaintext
+Enter your score: 85
+Grade: B
+
+  
+2. Student Grades Dictionary
+Objective: Create a menu-driven program using a dictionary to store student names and grades, allowing the user to add, update, and print grades.
+Code:
+Python
+# Student Grades Management
+
+students = {}
+
+while True:
+    print("\n1. Add Student")
+    print("2. Update Student Grade")
+    print("3. Display All Students")
+    print("4. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':
+        name = input("Enter student name: ")
+        grade = input("Enter grade: ")
+        students[name] = grade
+        print(f"Added {name} with grade {grade}")
+
+    elif choice == '2':
+        name = input("Enter student name to update: ")
+        if name in students:
+            grade = input("Enter new grade: ")
+            students[name] = grade
+            print(f"Updated {name}'s grade to {grade}")
+        else:
+            print("Student not found.")
+
+    elif choice == '3':
+        print("\nStudent Grades:")
+        for name, grade in students.items():
+            print(f"{name}: {grade}")
+
+    elif choice == '4':
+        break
+
+    else:
+        print("Invalid choice!")
+Explanation:
+•	Initializes an empty dictionary called students to store the data.
+•	Uses a while True loop to create a continuous menu-driven interface.
+•	Add: Assigns a new key-value pair via students[name] = grade.
+•	Update: Checks if the student exists using if name in students before updating.
+•	Display: Iterates through the dictionary using a for loop and the .items() method.
+Sample Output:
+Plaintext
+1. Add Student
+2. Update Grade
+3. Print All Grades
+4. Exit
+Enter your choice: 1
+Enter student name: vaibhav
+Enter grade: B
+Added vaibhav with grade B
+
+ 
+ 
+3. Write to a File
+Objective: Write a program to create a text file and write content to it.
+Code:
+Python
+# Write to File Program
+
+file = open("example.txt", "w") # open in write mode
+file.write("Hello, this is a test file.\nThis is the second line.")
+file.close()
+
+print("Data written to example.txt")
+Explanation:
+•	open("example.txt", "w"): Opens (or creates) the file in write mode (w).
+•	file.write(): Inserts the specified string content into the text file. The \n character is used to create a new line.
+•	file.close(): Closes the file, ensuring the changes are saved properly and system resources are freed.
+Sample Output:
+Plaintext
+Data written to example.txt
+ 
+ 
+4. Read from a File
+Objective: Read the contents of the previously created text file and display them in the console.
+Code:
+Python
+# Read from File Program
+
+file = open("example.txt", "r")
+content = file.read()
+print("File content:")
+print(content)
+file.close()
+Explanation:
+•	open("example.txt", "r"): Opens the file in read mode (r).
+•	file.read(): Reads the entire content of the file and stores it in the content variable.
+•	The script then prints the stored string to the terminal.
+Sample Output:
+Plaintext
+File content:
+Hello, this is a test file.
+This is the second line.
+
