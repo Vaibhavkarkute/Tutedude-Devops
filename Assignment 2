@@ -1,11 +1,123 @@
-Python Basics: Assignment Submission
-Name: Vaibhav Karkute 
-Subject: Python Scripting & File Handling
- 
-1. Grade Checker
-Objective: Take a score as input and print the grade based on specific ranges using if-elif-else statements.
-Code:
-Python
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Basics: Assignment Submission</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .header p {
+            margin: 5px 0;
+            opacity: 0.95;
+        }
+        .problem {
+            background: white;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .problem h2 {
+            color: #667eea;
+            margin-top: 0;
+        }
+        .objective {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+        }
+        .objective strong {
+            color: #28a745;
+        }
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .code-label {
+            background: #e8f4f8;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #0366d6;
+        }
+        .explanation {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+        .explanation strong {
+            color: #856404;
+        }
+        .output {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #28a745;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .output-label {
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-position: inside;
+        }
+        li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Python Basics: Assignment Submission</h1>
+        <p><strong>Name:</strong> Vaibhav Karkute</p>
+        <p><strong>Subject:</strong> Python Scripting & File Handling</p>
+    </div>
+
+    <!-- Problem 1 -->
+    <div class="problem">
+        <h2>1. Grade Checker</h2>
+        
+        <div class="objective">
+            <strong>Objective:</strong> Take a score as input and print the grade based on specific ranges using if-elif-else statements.
+        </div>
+
+        <div class="code-label">Code:</div>
+        <pre>
 # Grade Checker Program
 
 score = int(input("Enter your score: "))
@@ -19,21 +131,33 @@ elif score >= 70:
 elif score >= 60:
     print("Grade: D")
 else:
-    print("Grade: F")
-Explanation:
-•	The program takes user input using input().
-•	It converts the input string to an integer using int().
-•	It uses if-elif-else conditional logic to check the score against the defined ranges and prints the corresponding grade.
-Sample Output:
-Plaintext
-Enter your score: 85
-Grade: B
+    print("Grade: F")</pre>
 
-  
-2. Student Grades Dictionary
-Objective: Create a menu-driven program using a dictionary to store student names and grades, allowing the user to add, update, and print grades.
-Code:
-Python
+        <div class="explanation">
+            <strong>Explanation:</strong>
+            <ul>
+                <li>The program takes user input using <code>input()</code>.</li>
+                <li>It converts the input string to an integer using <code>int()</code>.</li>
+                <li>It uses if-elif-else conditional logic to check the score against the defined ranges and prints the corresponding grade.</li>
+            </ul>
+        </div>
+
+        <div class="output">
+            <div class="output-label">Sample Output:</div>
+Enter your score: 85
+Grade: B</div>
+    </div>
+
+    <!-- Problem 2 -->
+    <div class="problem">
+        <h2>2. Student Grades Dictionary</h2>
+        
+        <div class="objective">
+            <strong>Objective:</strong> Create a menu-driven program using a dictionary to store student names and grades, allowing the user to add, update, and print grades.
+        </div>
+
+        <div class="code-label">Code:</div>
+        <pre>
 # Student Grades Management
 
 students = {}
@@ -70,15 +194,21 @@ while True:
         break
 
     else:
-        print("Invalid choice!")
-Explanation:
-•	Initializes an empty dictionary called students to store the data.
-•	Uses a while True loop to create a continuous menu-driven interface.
-•	Add: Assigns a new key-value pair via students[name] = grade.
-•	Update: Checks if the student exists using if name in students before updating.
-•	Display: Iterates through the dictionary using a for loop and the .items() method.
-Sample Output:
-Plaintext
+        print("Invalid choice!")</pre>
+
+        <div class="explanation">
+            <strong>Explanation:</strong>
+            <ul>
+                <li>Initializes an empty dictionary called <code>students</code> to store the data.</li>
+                <li>Uses a <code>while True</code> loop to create a continuous menu-driven interface.</li>
+                <li><strong>Add:</strong> Assigns a new key-value pair via <code>students[name] = grade</code>.</li>
+                <li><strong>Update:</strong> Checks if the student exists using <code>if name in students</code> before updating.</li>
+                <li><strong>Display:</strong> Iterates through the dictionary using a for loop and the <code>.items()</code> method.</li>
+            </ul>
+        </div>
+
+        <div class="output">
+            <div class="output-label">Sample Output:</div>
 1. Add Student
 2. Update Grade
 3. Print All Grades
@@ -86,48 +216,74 @@ Plaintext
 Enter your choice: 1
 Enter student name: vaibhav
 Enter grade: B
-Added vaibhav with grade B
+Added vaibhav with grade B</div>
+    </div>
 
- 
- 
-3. Write to a File
-Objective: Write a program to create a text file and write content to it.
-Code:
-Python
+    <!-- Problem 3 -->
+    <div class="problem">
+        <h2>3. Write to a File</h2>
+        
+        <div class="objective">
+            <strong>Objective:</strong> Write a program to create a text file and write content to it.
+        </div>
+
+        <div class="code-label">Code:</div>
+        <pre>
 # Write to File Program
 
-file = open("example.txt", "w") # open in write mode
+file = open("example.txt", "w")  # open in write mode
 file.write("Hello, this is a test file.\nThis is the second line.")
 file.close()
 
-print("Data written to example.txt")
-Explanation:
-•	open("example.txt", "w"): Opens (or creates) the file in write mode (w).
-•	file.write(): Inserts the specified string content into the text file. The \n character is used to create a new line.
-•	file.close(): Closes the file, ensuring the changes are saved properly and system resources are freed.
-Sample Output:
-Plaintext
-Data written to example.txt
- 
- 
-4. Read from a File
-Objective: Read the contents of the previously created text file and display them in the console.
-Code:
-Python
+print("Data written to example.txt")</pre>
+
+        <div class="explanation">
+            <strong>Explanation:</strong>
+            <ul>
+                <li><code>open("example.txt", "w")</code>: Opens (or creates) the file in write mode (w).</li>
+                <li><code>file.write()</code>: Inserts the specified string content into the text file. The \n character is used to create a new line.</li>
+                <li><code>file.close()</code>: Closes the file, ensuring the changes are saved properly and system resources are freed.</li>
+            </ul>
+        </div>
+
+        <div class="output">
+            <div class="output-label">Sample Output:</div>
+Data written to example.txt</div>
+    </div>
+
+    <!-- Problem 4 -->
+    <div class="problem">
+        <h2>4. Read from a File</h2>
+        
+        <div class="objective">
+            <strong>Objective:</strong> Read the contents of the previously created text file and display them in the console.
+        </div>
+
+        <div class="code-label">Code:</div>
+        <pre>
 # Read from File Program
 
 file = open("example.txt", "r")
 content = file.read()
 print("File content:")
 print(content)
-file.close()
-Explanation:
-•	open("example.txt", "r"): Opens the file in read mode (r).
-•	file.read(): Reads the entire content of the file and stores it in the content variable.
-•	The script then prints the stored string to the terminal.
-Sample Output:
-Plaintext
+file.close()</pre>
+
+        <div class="explanation">
+            <strong>Explanation:</strong>
+            <ul>
+                <li><code>open("example.txt", "r")</code>: Opens the file in read mode (r).</li>
+                <li><code>file.read()</code>: Reads the entire content of the file and stores it in the <code>content</code> variable.</li>
+                <li>The script then prints the stored string to the terminal.</li>
+            </ul>
+        </div>
+
+        <div class="output">
+            <div class="output-label">Sample Output:</div>
 File content:
 Hello, this is a test file.
-This is the second line.
+This is the second line.</div>
+    </div>
 
+</body>
+</html>
